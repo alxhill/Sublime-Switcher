@@ -42,8 +42,8 @@ class SwitcherCommand(sublime_plugin.ApplicationCommand):
   def load_data(self):
     for root, subFolders, files in walk(sublime.packages_path()):
       for filename in files:
-        name = path.splitext(filename)[0]
-        if filename.endswith('.tmTheme'):
+        name = path.splitext(filename)[0].replace('-', ' ')
+        if filename.lower().endswith('.tmtheme'):
           location = path.join("Packages", path.relpath(path.join(root, filename), package_dir))
           self.color_names.append(name)
           self.color_paths[name] = location
