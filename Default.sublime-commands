@@ -1,0 +1,18 @@
+[
+	{
+		"caption" : "Switcher: Change Color Scheme",
+		"command" : "switcher",
+		"args" :
+		{
+			"type" : "color_scheme"
+		}
+	},
+	{
+		"caption" : "Switcher: Change Theme",
+		"command" : "switcher",
+		"args" :
+		{
+			"type" : "theme"
+		}
+	}
+]
